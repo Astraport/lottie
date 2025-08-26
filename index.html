@@ -4,27 +4,33 @@
   <meta charset="UTF-8">
   <title>Lottie Test</title>
   <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+    }
     #lottie {
       width: 400px;
       height: 400px;
-      margin: 50px auto;
+      background: white;
     }
   </style>
 </head>
 <body>
   <div id="lottie"></div>
 
-  <!-- подключаем lottie-web -->
+  <!-- lottie-web -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 
   <script>
-    // загружаем JSON анимацию
     lottie.loadAnimation({
-      container: document.getElementById("lottie"), // куда вставляем
-      renderer: "svg",   // можно "canvas" или "html"
-      loop: true,        // зацикливать
-      autoplay: true,    // запускать сразу
-      path: "output.json" // путь к твоему файлу JSON
+      container: document.getElementById("lottie"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "output.json"   // должен лежать рядом с index.html
     });
   </script>
 </body>
